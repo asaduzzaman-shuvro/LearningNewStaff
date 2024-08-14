@@ -8,35 +8,37 @@
 import WidgetKit
 import SwiftUI
 
-struct Provider: TimelineProvider {
+struct Provider: IntentTimelineProvider {
+    typealias Entry = SimpleEntry
+    typealias Intent = ConfigurationIntent
+    
     func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), emoji: "😀")
+        SimpleEntry(date: Date(), configuration: ConfigurationIntent())
     }
-
-    func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date(), emoji: "😀")
+    
+    func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (SimpleEntry) -> Void) {
+        let entry = SimpleEntry(date: Date(), configuration: configuration)
         completion(entry)
     }
-
-    func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-        var entries: [SimpleEntry] = []
-
-        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
+    
+    func getTimeline(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Timeline<SimpleEntry>) -> Void) {
+        
+        var entries = [SimpleEntry]()
         let currentDate = Date()
-        for hourOffset in 0 ..< 5 {
+        
+        for hourOffset in 0..<5 {
             let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate, emoji: "😀")
-            entries.append(entry)
+            entries.append(SimpleEntry(date: entryDate, configuration: configuration))
         }
-
-        let timeline = Timeline(entries: entries, policy: .atEnd)
-        completion(timeline)
+        completion(Timeline(entries: entries, policy: .atEnd))
     }
 }
 
+
+
 struct SimpleEntry: TimelineEntry {
     let date: Date
-    let emoji: String
+    let configuration: ConfigurationIntent
 }
 
 struct StockWidgetsEntryView : View {
@@ -46,9 +48,10 @@ struct StockWidgetsEntryView : View {
         VStack {
             Text("Time:")
             Text(entry.date, style: .time)
-
-            Text("Emoji:")
-            Text(entry.emoji)
+            if let symbol = entry.configuration.symbol {
+                Text("Emoji:")
+                Text(symbol)
+            }
         }
         .backdrop {
             Color.white
@@ -60,16 +63,9 @@ struct StockWidgets: Widget {
     let kind: String = "StockWidgets"
 
     var body: some WidgetConfiguration {
-        StaticConfiguration(kind: kind, provider: Provider()) { entry in
-            if #available(iOS 17.0, *) {
-                StockWidgetsEntryView(entry: entry)
-                    .containerBackground(.fill.tertiary, for: .widget)
-            } else {
-                StockWidgetsEntryView(entry: entry)
-                    .padding()
-                    .background()
-            }
-        }
+        IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider(), content: { entry in
+            StockWidgetsEntryView(entry: entry)
+        })
         .configurationDisplayName("My Widget")
         .description("This is an example widget.")
     }
@@ -78,7 +74,12 @@ struct StockWidgets: Widget {
 
 struct StockWidgetsEntryView_Previews: PreviewProvider {
     static var previews: some View {
-        StockWidgetsEntryView(entry: Provider.Entry(date: Date(), emoji: "😀"))
+        StockWidgetsEntryView(
+            entry: Provider.Entry(
+                date: Date(),
+                configuration: ConfigurationIntent()
+            )
+        )
             .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }

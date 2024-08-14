@@ -22,6 +22,7 @@
 		5CBB991F2C6C9A0300290AE6 /* StockWidgets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBB991E2C6C9A0300290AE6 /* StockWidgets.swift */; };
 		5CBB99212C6C9A0500290AE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CBB99202C6C9A0500290AE6 /* Assets.xcassets */; };
 		5CBB99252C6C9A0500290AE6 /* StockWidgetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 5CBB99152C6C9A0300290AE6 /* StockWidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		5CBB992B2C6C9C1A00290AE6 /* WidgetIntents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 5CBB992A2C6C9C1A00290AE6 /* WidgetIntents.intentdefinition */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		5CBB991E2C6C9A0300290AE6 /* StockWidgets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockWidgets.swift; sourceTree = "<group>"; };
 		5CBB99202C6C9A0500290AE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5CBB99222C6C9A0500290AE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5CBB992A2C6C9C1A00290AE6 /* WidgetIntents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = WidgetIntents.intentdefinition; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 		5C51839D2C688E8500BE5E5B = {
 			isa = PBXGroup;
 			children = (
+				5CBB992A2C6C9C1A00290AE6 /* WidgetIntents.intentdefinition */,
 				5C5183A82C688E8500BE5E5B /* WidgetKitPractice */,
 				5C5183BE2C688E8B00BE5E5B /* WidgetKitPracticeTests */,
 				5C5183C82C688E8B00BE5E5B /* WidgetKitPracticeUITests */,
@@ -389,6 +392,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CBB991F2C6C9A0300290AE6 /* StockWidgets.swift in Sources */,
+				5CBB992B2C6C9C1A00290AE6 /* WidgetIntents.intentdefinition in Sources */,
 				5CBB991D2C6C9A0300290AE6 /* StockWidgetsBundle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,29 +7,50 @@
 
 import WidgetKit
 import Intents
+import Combine
 
-struct Provider: IntentTimelineProvider {
+class Provider: IntentTimelineProvider {
+    private var anyCancellable: Set<AnyCancellable> = []
+    
     typealias Entry = SimpleEntry
     typealias Intent = ConfigurationIntent
     
     func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), configuration: ConfigurationIntent())
+        SimpleEntry(date: Date(), configuration: ConfigurationIntent(), stockData: nil)
     }
     
     func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (SimpleEntry) -> Void) {
-        let entry = SimpleEntry(date: Date(), configuration: configuration)
-        completion(entry)
+        createTimeLineEntry(date: Date(), configuration: configuration, completion: completion)
     }
     
     func getTimeline(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Timeline<SimpleEntry>) -> Void) {
+       createTimeLine(date: Date(), configuration: configuration, completion: completion)
+    }
+    
+    private func createTimeLineEntry(date: Date, configuration: ConfigurationIntent, completion: @escaping (SimpleEntry) -> Void) {
         
-        var entries = [SimpleEntry]()
-        let currentDate = Date()
+        StockService()
+            .getStockData(for: configuration.symbol ?? "IBM")
+            .sink { _ in
+                
+            } receiveValue: { stockData in
+                let entry = SimpleEntry(date: date, configuration: configuration, stockData: stockData)
+                completion(entry)
+            }
+            .store(in: &anyCancellable)
+
+    }
+    
+    private func createTimeLine(date: Date, configuration: ConfigurationIntent, completion: @escaping (Timeline<SimpleEntry>) -> Void) {
         
-        for hourOffset in 0..<5 {
-            let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            entries.append(SimpleEntry(date: entryDate, configuration: configuration))
-        }
-        completion(Timeline(entries: entries, policy: .atEnd))
+        StockService()
+            .getStockData(for: configuration.symbol ?? "IBM")
+            .sink { _ in
+                
+            } receiveValue: { stockData in
+                let entry = SimpleEntry(date: date, configuration: configuration, stockData: stockData)
+                completion(Timeline(entries: [entry], policy: .never))
+            }
+            .store(in: &anyCancellable)
     }
 }

@@ -65,4 +65,12 @@ struct StockData: Codable, Identifiable {
         return rawValues.map { ($0 - min * 0.95) / (max - min * 0.95) }
         
     }
+    
+    var url: URL {
+        guard let url = URL(string: "stockapp://symbol/\(metaData.symbol)") else {
+            fatalError("Failed to construct")
+        }
+        return url
+    }
+    
 }

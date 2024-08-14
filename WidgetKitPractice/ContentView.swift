@@ -10,9 +10,12 @@ import CoreData
 
 struct ContentView: View  {
     @ObservedObject private var model = ContentViewModel()
+    @State var symbol: String = ""
+    
     var body: some View {
         NavigationView {
             List {
+                Text(symbol)
                 HStack {
                     TextField("Symbol", text: $model.symbol)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
@@ -46,6 +49,15 @@ struct ContentView: View  {
                 }
             }
         }
+        .onOpenURL(perform: { url in
+            guard url.scheme == "stockapp",
+                  url.host == "symbol",
+                  let symbol = url.pathComponents.last
+            else {
+                return
+            }
+            self.symbol = symbol
+        })
     }
 }
 

@@ -23,6 +23,17 @@
 		5CBB99212C6C9A0500290AE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5CBB99202C6C9A0500290AE6 /* Assets.xcassets */; };
 		5CBB99252C6C9A0500290AE6 /* StockWidgetsExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 5CBB99152C6C9A0300290AE6 /* StockWidgetsExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5CBB992B2C6C9C1A00290AE6 /* WidgetIntents.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 5CBB992A2C6C9C1A00290AE6 /* WidgetIntents.intentdefinition */; };
+		5CBB992D2C6CA7C900290AE6 /* TimeLineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBB992C2C6CA7C900290AE6 /* TimeLineProvider.swift */; };
+		5CBB992F2C6CA7EE00290AE6 /* TimeLineEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBB992E2C6CA7EE00290AE6 /* TimeLineEntry.swift */; };
+		5CBB99312C6CA81C00290AE6 /* StockWidgetsEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBB99302C6CA81C00290AE6 /* StockWidgetsEntryView.swift */; };
+		5CD4921F2C6CA93900232F84 /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD4921E2C6CA93900232F84 /* LineChart.swift */; };
+		5CD492202C6CAB3800232F84 /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD4921E2C6CA93900232F84 /* LineChart.swift */; };
+		5CD492232C6CAB6900232F84 /* StockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD492222C6CAB6900232F84 /* StockData.swift */; };
+		5CD492252C6CAF3E00232F84 /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD492242C6CAF3E00232F84 /* ContentViewModel.swift */; };
+		5CD492282C6CB7BE00232F84 /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD492272C6CB7BE00232F84 /* APIKey.swift */; };
+		5CEB66252C6CCD46004CFF8F /* MainBundlePublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CEB66242C6CCD46004CFF8F /* MainBundlePublisher.swift */; };
+		5CEB66262C6CD169004CFF8F /* StockJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 5CEB66232C6CC601004CFF8F /* StockJSON.json */; };
+		5CEB66272C6CD16C004CFF8F /* StockJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 5CEB66232C6CC601004CFF8F /* StockJSON.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +95,15 @@
 		5CBB99202C6C9A0500290AE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5CBB99222C6C9A0500290AE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5CBB992A2C6C9C1A00290AE6 /* WidgetIntents.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = WidgetIntents.intentdefinition; sourceTree = "<group>"; };
+		5CBB992C2C6CA7C900290AE6 /* TimeLineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineProvider.swift; sourceTree = "<group>"; };
+		5CBB992E2C6CA7EE00290AE6 /* TimeLineEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLineEntry.swift; sourceTree = "<group>"; };
+		5CBB99302C6CA81C00290AE6 /* StockWidgetsEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockWidgetsEntryView.swift; sourceTree = "<group>"; };
+		5CD4921E2C6CA93900232F84 /* LineChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
+		5CD492222C6CAB6900232F84 /* StockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockData.swift; sourceTree = "<group>"; };
+		5CD492242C6CAF3E00232F84 /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		5CD492272C6CB7BE00232F84 /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		5CEB66232C6CC601004CFF8F /* StockJSON.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = StockJSON.json; sourceTree = "<group>"; };
+		5CEB66242C6CCD46004CFF8F /* MainBundlePublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBundlePublisher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +172,10 @@
 				5C5183AD2C688E8900BE5E5B /* Assets.xcassets */,
 				5C5183B22C688E8900BE5E5B /* Persistence.swift */,
 				5C5183B42C688E8900BE5E5B /* WidgetKitPractice.xcdatamodeld */,
+				5CD492262C6CB7AE00232F84 /* APIKey */,
+				5CD492212C6CAB5B00232F84 /* Model */,
+				5CD4921D2C6CA92600232F84 /* Conteent */,
+				5CEB66222C6CC5DE004CFF8F /* Resources */,
 				5C5183AF2C688E8900BE5E5B /* Preview Content */,
 			);
 			path = WidgetKitPractice;
@@ -196,10 +220,47 @@
 			children = (
 				5CBB991C2C6C9A0300290AE6 /* StockWidgetsBundle.swift */,
 				5CBB991E2C6C9A0300290AE6 /* StockWidgets.swift */,
+				5CBB992E2C6CA7EE00290AE6 /* TimeLineEntry.swift */,
+				5CBB992C2C6CA7C900290AE6 /* TimeLineProvider.swift */,
+				5CBB99302C6CA81C00290AE6 /* StockWidgetsEntryView.swift */,
 				5CBB99202C6C9A0500290AE6 /* Assets.xcassets */,
 				5CBB99222C6C9A0500290AE6 /* Info.plist */,
 			);
 			path = StockWidgets;
+			sourceTree = "<group>";
+		};
+		5CD4921D2C6CA92600232F84 /* Conteent */ = {
+			isa = PBXGroup;
+			children = (
+				5CD4921E2C6CA93900232F84 /* LineChart.swift */,
+				5CD492242C6CAF3E00232F84 /* ContentViewModel.swift */,
+				5CEB66242C6CCD46004CFF8F /* MainBundlePublisher.swift */,
+			);
+			path = Conteent;
+			sourceTree = "<group>";
+		};
+		5CD492212C6CAB5B00232F84 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5CD492222C6CAB6900232F84 /* StockData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5CD492262C6CB7AE00232F84 /* APIKey */ = {
+			isa = PBXGroup;
+			children = (
+				5CD492272C6CB7BE00232F84 /* APIKey.swift */,
+			);
+			path = APIKey;
+			sourceTree = "<group>";
+		};
+		5CEB66222C6CC5DE004CFF8F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5CEB66232C6CC601004CFF8F /* StockJSON.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,6 +390,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CEB66262C6CD169004CFF8F /* StockJSON.json in Resources */,
 				5C5183B12C688E8900BE5E5B /* Preview Assets.xcassets in Resources */,
 				5C5183AE2C688E8900BE5E5B /* Assets.xcassets in Resources */,
 			);
@@ -352,6 +414,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CEB66272C6CD16C004CFF8F /* StockJSON.json in Resources */,
 				5CBB99212C6C9A0500290AE6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -365,8 +428,13 @@
 			files = (
 				5C5183B32C688E8900BE5E5B /* Persistence.swift in Sources */,
 				5C5183B62C688E8900BE5E5B /* WidgetKitPractice.xcdatamodeld in Sources */,
+				5CD492282C6CB7BE00232F84 /* APIKey.swift in Sources */,
+				5CD492232C6CAB6900232F84 /* StockData.swift in Sources */,
+				5CD492252C6CAF3E00232F84 /* ContentViewModel.swift in Sources */,
+				5CEB66252C6CCD46004CFF8F /* MainBundlePublisher.swift in Sources */,
 				5C5183AC2C688E8500BE5E5B /* ContentView.swift in Sources */,
 				5C5183AA2C688E8500BE5E5B /* WidgetKitPracticeApp.swift in Sources */,
+				5CD4921F2C6CA93900232F84 /* LineChart.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,9 +459,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5CBB992F2C6CA7EE00290AE6 /* TimeLineEntry.swift in Sources */,
 				5CBB991F2C6C9A0300290AE6 /* StockWidgets.swift in Sources */,
 				5CBB992B2C6C9C1A00290AE6 /* WidgetIntents.intentdefinition in Sources */,
 				5CBB991D2C6C9A0300290AE6 /* StockWidgetsBundle.swift in Sources */,
+				5CD492202C6CAB3800232F84 /* LineChart.swift in Sources */,
+				5CBB992D2C6CA7C900290AE6 /* TimeLineProvider.swift in Sources */,
+				5CBB99312C6CA81C00290AE6 /* StockWidgetsEntryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

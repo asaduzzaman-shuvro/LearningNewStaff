@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 import Combine
 import CoreData
+import Intents
 
 final class ContentViewModel: ObservableObject {
     private let context = PersistenceController.shared.container.viewContext
@@ -124,6 +125,23 @@ final class ContentViewModel: ObservableObject {
 //            .store(in: &cancellables)
     }
     
+    func doneIntent() {
+        let intent = ConfigurationIntent()
+        intent.customSymbol = CustomSymbol(identifier: "AAPL", display: "Apple Inc.")
+        let interaction = INInteraction(intent: intent, response: nil)
+        interaction.identifier = "AAPL-interation"
+        interaction.donate { error in
+            if let error = error {
+                print(error)
+            }
+        }
+        
+        INInteraction.delete(with: "AAPL-interation") { error in
+            if let error = error {
+                print(error)
+            }
+        }
+    }
 }
 
 

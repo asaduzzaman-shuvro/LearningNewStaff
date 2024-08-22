@@ -5,6 +5,8 @@
 //  Created by Asaduzzaman Shuvro on 15/8/24.
 //
 
+#if canImport(ActivityKit)
+
 import ActivityKit
 import Foundation
 
@@ -16,3 +18,4 @@ public struct TimeTrackingAttributes: ActivityAttributes {
         
     }
 }
+#endif

@@ -29,13 +29,19 @@ struct ContentView: View  {
                         startTime = .now
                         let attributes = TimeTrackingAttributes()
                         let state = TimeTrackingAttributes.ContentState(startTime: .now)
-                        if #available(iOS 16.2, *) {
-                            let content = ActivityContent(state: state, staleDate: nil)
-                            activity = try? Activity<TimeTrackingAttributes>.request(attributes: attributes, content: content, pushType: .token)
+                        if ActivityAuthorizationInfo().areActivitiesEnabled {
+                            let attributes = TimeTrackingAttributes()
+                            let initialState = TimeTrackingAttributes.State(startTime: Date())
+                            do {
+                                let activity = try Activity.request(attributes: attributes, content: .init(state: initialState, staleDate: nil), pushType: .token)
+                                self.activity = activity
+                            } catch let error {
+                                print(error.localizedDescription)
+                            }
                         } else {
-                            // Fallback on earlier versions
+                            print("Activity inn't enabled")
                         }
-                        print(activity)
+                       
                     } else {
                         // stop live activity
                         guard let startTime else { return  }
@@ -58,6 +64,17 @@ struct ContentView: View  {
                 }
                 .navigationTitle("Basic Time Tracker")
             }
+            .onAppear(perform: {
+                UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { (granted, error) in
+                    if granted {
+                        DispatchQueue.main.async {
+                            UIApplication.shared.registerForRemoteNotifications()
+                        }
+                    } else {
+                        print("Permission for push notifications denied.")
+                    }
+                }
+            })
         }
     }
 }

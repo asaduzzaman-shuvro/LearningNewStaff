@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:InteractiveButtonInWidget/InteractiveButtonInWidget.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:ActivityKitTutorial/ActivityKitTutorial.xcodeproj">
    </FileRef>
    <FileRef

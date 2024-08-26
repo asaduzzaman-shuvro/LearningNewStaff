@@ -14,7 +14,7 @@ struct InteractiveButtonInWidgetApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .defaultAppStorage(UserDefaults(suiteName: "group.interactivebuttonwidget")!)
+                .defaultAppStorage(UserDefaults(suiteName: appGroupIdentifier)!)
         }
     }
 }

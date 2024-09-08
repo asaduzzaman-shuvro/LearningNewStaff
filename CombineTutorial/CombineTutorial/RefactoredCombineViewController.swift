@@ -29,6 +29,9 @@ class RefactoredCombineViewController: UIViewController {
         view.addSubview(label)
         
         bind()
+        
+        let _ = CompacMapOperator()
+
     }
     
     private func bind() {

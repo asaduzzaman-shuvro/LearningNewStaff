@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		25B288BC2C8E1A3800A8487B /* CompacMapOperatorWithCombine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B288BB2C8E1A3800A8487B /* CompacMapOperatorWithCombine.swift */; };
 		25F288E02C8E152E0035BB95 /* RefactoredCombineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F288DF2C8E152E0035BB95 /* RefactoredCombineViewController.swift */; };
 		5CC4583D2C8AFA9400DD57B4 /* CombineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC4583C2C8AFA9400DD57B4 /* CombineViewController.swift */; };
 		5CFCCF842C89CBDA006A7294 /* CombineTutorialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFCCF832C89CBDA006A7294 /* CombineTutorialApp.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		25B288BB2C8E1A3800A8487B /* CompacMapOperatorWithCombine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompacMapOperatorWithCombine.swift; sourceTree = "<group>"; };
 		25F288DF2C8E152E0035BB95 /* RefactoredCombineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefactoredCombineViewController.swift; sourceTree = "<group>"; };
 		5CC4583C2C8AFA9400DD57B4 /* CombineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineViewController.swift; sourceTree = "<group>"; };
 		5CFCCF802C89CBDA006A7294 /* CombineTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CombineTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +69,7 @@
 				5CFCCF852C89CBDA006A7294 /* ContentView.swift */,
 				5CFCCF982C89D5AC006A7294 /* InputView.swift */,
 				5CC4583C2C8AFA9400DD57B4 /* CombineViewController.swift */,
+				25B288BB2C8E1A3800A8487B /* CompacMapOperatorWithCombine.swift */,
 				25F288DF2C8E152E0035BB95 /* RefactoredCombineViewController.swift */,
 				5CFCCF962C89CC07006A7294 /* ApiService.swift */,
 				5CFCCF872C89CBDD006A7294 /* Assets.xcassets */,
@@ -162,6 +165,7 @@
 				5CFCCF992C89D5AC006A7294 /* InputView.swift in Sources */,
 				5CC4583D2C8AFA9400DD57B4 /* CombineViewController.swift in Sources */,
 				5CFCCF862C89CBDA006A7294 /* ContentView.swift in Sources */,
+				25B288BC2C8E1A3800A8487B /* CompacMapOperatorWithCombine.swift in Sources */,
 				5CFCCF842C89CBDA006A7294 /* CombineTutorialApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

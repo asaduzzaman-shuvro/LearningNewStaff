@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		256AEFB02CAB063200BF9015 /* FlatMapCombineOperatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256AEFAF2CAB063200BF9015 /* FlatMapCombineOperatorViewController.swift */; };
 		25B288BC2C8E1A3800A8487B /* CompacMapOperatorWithCombine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B288BB2C8E1A3800A8487B /* CompacMapOperatorWithCombine.swift */; };
 		25F288E02C8E152E0035BB95 /* RefactoredCombineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F288DF2C8E152E0035BB95 /* RefactoredCombineViewController.swift */; };
 		5CC4583D2C8AFA9400DD57B4 /* CombineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC4583C2C8AFA9400DD57B4 /* CombineViewController.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		256AEFAF2CAB063200BF9015 /* FlatMapCombineOperatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatMapCombineOperatorViewController.swift; sourceTree = "<group>"; };
 		25B288BB2C8E1A3800A8487B /* CompacMapOperatorWithCombine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompacMapOperatorWithCombine.swift; sourceTree = "<group>"; };
 		25F288DF2C8E152E0035BB95 /* RefactoredCombineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefactoredCombineViewController.swift; sourceTree = "<group>"; };
 		5CC4583C2C8AFA9400DD57B4 /* CombineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				5CFCCF982C89D5AC006A7294 /* InputView.swift */,
 				5CC4583C2C8AFA9400DD57B4 /* CombineViewController.swift */,
 				25B288BB2C8E1A3800A8487B /* CompacMapOperatorWithCombine.swift */,
+				256AEFAF2CAB063200BF9015 /* FlatMapCombineOperatorViewController.swift */,
 				25F288DF2C8E152E0035BB95 /* RefactoredCombineViewController.swift */,
 				5CFCCF962C89CC07006A7294 /* ApiService.swift */,
 				5CFCCF872C89CBDD006A7294 /* Assets.xcassets */,
@@ -159,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5CFCCF8D2C89CBDD006A7294 /* Persistence.swift in Sources */,
+				256AEFB02CAB063200BF9015 /* FlatMapCombineOperatorViewController.swift in Sources */,
 				5CFCCF972C89CC07006A7294 /* ApiService.swift in Sources */,
 				5CFCCF902C89CBDD006A7294 /* CombineTutorial.xcdatamodeld in Sources */,
 				25F288E02C8E152E0035BB95 /* RefactoredCombineViewController.swift in Sources */,

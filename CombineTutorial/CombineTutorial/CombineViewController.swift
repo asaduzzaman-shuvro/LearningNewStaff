@@ -46,10 +46,10 @@ class CombineViewController: UIViewController {
 }
 
 struct CombineView: UIViewControllerRepresentable {
-    typealias UIViewControllerType = RefactoredCombineViewController
+    typealias UIViewControllerType = FlatMapCombineOperatorViewController
 
     func makeUIViewController(context: Context) -> UIViewControllerType {
-        return RefactoredCombineViewController()
+        return FlatMapCombineOperatorViewController()
     }
     
     func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {

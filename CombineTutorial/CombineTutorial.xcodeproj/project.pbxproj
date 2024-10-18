@@ -10,6 +10,8 @@
 		256AEFB02CAB063200BF9015 /* FlatMapCombineOperatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256AEFAF2CAB063200BF9015 /* FlatMapCombineOperatorViewController.swift */; };
 		25B288BC2C8E1A3800A8487B /* CompacMapOperatorWithCombine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25B288BB2C8E1A3800A8487B /* CompacMapOperatorWithCombine.swift */; };
 		25F288E02C8E152E0035BB95 /* RefactoredCombineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25F288DF2C8E152E0035BB95 /* RefactoredCombineViewController.swift */; };
+		5C1D64FD2CC2770000358B52 /* MulticastPublisherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5C1D64FC2CC2770000358B52 /* MulticastPublisherViewController.xib */; };
+		5C1D64FE2CC2770000358B52 /* MulticastPublisherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C1D64FB2CC2770000358B52 /* MulticastPublisherViewController.swift */; };
 		5CC4583D2C8AFA9400DD57B4 /* CombineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC4583C2C8AFA9400DD57B4 /* CombineViewController.swift */; };
 		5CFCCF842C89CBDA006A7294 /* CombineTutorialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFCCF832C89CBDA006A7294 /* CombineTutorialApp.swift */; };
 		5CFCCF862C89CBDA006A7294 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CFCCF852C89CBDA006A7294 /* ContentView.swift */; };
@@ -25,6 +27,8 @@
 		256AEFAF2CAB063200BF9015 /* FlatMapCombineOperatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatMapCombineOperatorViewController.swift; sourceTree = "<group>"; };
 		25B288BB2C8E1A3800A8487B /* CompacMapOperatorWithCombine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompacMapOperatorWithCombine.swift; sourceTree = "<group>"; };
 		25F288DF2C8E152E0035BB95 /* RefactoredCombineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefactoredCombineViewController.swift; sourceTree = "<group>"; };
+		5C1D64FB2CC2770000358B52 /* MulticastPublisherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MulticastPublisherViewController.swift; sourceTree = "<group>"; };
+		5C1D64FC2CC2770000358B52 /* MulticastPublisherViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MulticastPublisherViewController.xib; sourceTree = "<group>"; };
 		5CC4583C2C8AFA9400DD57B4 /* CombineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineViewController.swift; sourceTree = "<group>"; };
 		5CFCCF802C89CBDA006A7294 /* CombineTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CombineTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CFCCF832C89CBDA006A7294 /* CombineTutorialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineTutorialApp.swift; sourceTree = "<group>"; };
@@ -79,6 +83,8 @@
 				5CFCCF8C2C89CBDD006A7294 /* Persistence.swift */,
 				5CFCCF8E2C89CBDD006A7294 /* CombineTutorial.xcdatamodeld */,
 				5CFCCF892C89CBDD006A7294 /* Preview Content */,
+				5C1D64FB2CC2770000358B52 /* MulticastPublisherViewController.swift */,
+				5C1D64FC2CC2770000358B52 /* MulticastPublisherViewController.xib */,
 			);
 			path = CombineTutorial;
 			sourceTree = "<group>";
@@ -151,6 +157,7 @@
 			files = (
 				5CFCCF8B2C89CBDD006A7294 /* Preview Assets.xcassets in Resources */,
 				5CFCCF882C89CBDD006A7294 /* Assets.xcassets in Resources */,
+				5C1D64FD2CC2770000358B52 /* MulticastPublisherViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,6 +175,7 @@
 				25F288E02C8E152E0035BB95 /* RefactoredCombineViewController.swift in Sources */,
 				5CFCCF992C89D5AC006A7294 /* InputView.swift in Sources */,
 				5CC4583D2C8AFA9400DD57B4 /* CombineViewController.swift in Sources */,
+				5C1D64FE2CC2770000358B52 /* MulticastPublisherViewController.swift in Sources */,
 				5CFCCF862C89CBDA006A7294 /* ContentView.swift in Sources */,
 				25B288BC2C8E1A3800A8487B /* CompacMapOperatorWithCombine.swift in Sources */,
 				5CFCCF842C89CBDA006A7294 /* CombineTutorialApp.swift in Sources */,

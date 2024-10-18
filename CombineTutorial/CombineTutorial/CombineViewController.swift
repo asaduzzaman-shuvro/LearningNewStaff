@@ -46,10 +46,10 @@ class CombineViewController: UIViewController {
 }
 
 struct CombineView: UIViewControllerRepresentable {
-    typealias UIViewControllerType = FlatMapCombineOperatorViewController
+    typealias UIViewControllerType = MulticastPublisherViewController
 
     func makeUIViewController(context: Context) -> UIViewControllerType {
-        return FlatMapCombineOperatorViewController()
+        return UIViewControllerType()
     }
     
     func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {

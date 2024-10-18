@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MulticastPublisherViewController" customModule="CombineTutorial" customModuleProvider="target">
+            <connections>
+                <outlet property="textView1" destination="BCI-uX-E9a" id="Qra-HI-tYg"/>
+                <outlet property="textView2" destination="ZRp-RC-sdb" id="DEs-9i-YVD"/>
+                <outlet property="textView3" destination="xT6-To-jjw" id="23W-7e-M74"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dml-Xw-dQM">
+                    <rect key="frame" x="0.0" y="79" width="393" height="300"/>
+                    <subviews>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BCI-uX-E9a">
+                            <rect key="frame" x="20" y="0.0" width="111" height="300"/>
+                            <color key="backgroundColor" systemColor="systemBrownColor"/>
+                            <color key="textColor" systemColor="labelColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZRp-RC-sdb">
+                            <rect key="frame" x="141" y="0.0" width="111" height="300"/>
+                            <color key="backgroundColor" systemColor="systemBrownColor"/>
+                            <color key="textColor" systemColor="labelColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xT6-To-jjw">
+                            <rect key="frame" x="262" y="0.0" width="111" height="300"/>
+                            <color key="backgroundColor" systemColor="systemBrownColor"/>
+                            <color key="textColor" systemColor="labelColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="scrollViewTexturedBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="xT6-To-jjw" firstAttribute="leading" secondItem="ZRp-RC-sdb" secondAttribute="trailing" constant="10" id="72l-W0-876"/>
+                        <constraint firstAttribute="bottom" secondItem="ZRp-RC-sdb" secondAttribute="bottom" id="DDA-is-0i3"/>
+                        <constraint firstAttribute="height" constant="300" id="IH7-my-gQn"/>
+                        <constraint firstAttribute="bottom" secondItem="BCI-uX-E9a" secondAttribute="bottom" id="IXk-7c-bIz"/>
+                        <constraint firstItem="xT6-To-jjw" firstAttribute="width" secondItem="BCI-uX-E9a" secondAttribute="width" id="Irk-kQ-xeZ"/>
+                        <constraint firstItem="xT6-To-jjw" firstAttribute="top" secondItem="dml-Xw-dQM" secondAttribute="top" id="TpG-1R-7wF"/>
+                        <constraint firstAttribute="bottom" secondItem="xT6-To-jjw" secondAttribute="bottom" id="aID-Di-WrN"/>
+                        <constraint firstItem="BCI-uX-E9a" firstAttribute="top" secondItem="dml-Xw-dQM" secondAttribute="top" id="fpm-XT-55k"/>
+                        <constraint firstItem="ZRp-RC-sdb" firstAttribute="leading" secondItem="BCI-uX-E9a" secondAttribute="trailing" constant="10" id="gyT-Sw-rCF"/>
+                        <constraint firstAttribute="trailing" secondItem="xT6-To-jjw" secondAttribute="trailing" constant="20" id="jPO-NX-Mp7"/>
+                        <constraint firstItem="BCI-uX-E9a" firstAttribute="leading" secondItem="dml-Xw-dQM" secondAttribute="leading" constant="20" id="sgq-36-2Ph"/>
+                        <constraint firstItem="ZRp-RC-sdb" firstAttribute="top" secondItem="dml-Xw-dQM" secondAttribute="top" id="vct-uS-TiA"/>
+                        <constraint firstItem="ZRp-RC-sdb" firstAttribute="width" secondItem="BCI-uX-E9a" secondAttribute="width" id="yLd-xo-bSi"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dml-Xw-dQM" secondAttribute="trailing" id="THj-hR-U9z"/>
+                <constraint firstItem="dml-Xw-dQM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="mlA-Xs-80V"/>
+                <constraint firstItem="dml-Xw-dQM" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="xhv-Iw-Fbb"/>
+            </constraints>
+            <point key="canvasLocation" x="-132.06106870229007" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="scrollViewTexturedBackgroundColor">
+            <color red="0.43529411764705883" green="0.44313725490196076" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

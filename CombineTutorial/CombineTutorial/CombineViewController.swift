@@ -46,7 +46,7 @@ class CombineViewController: UIViewController {
 }
 
 struct CombineView: UIViewControllerRepresentable {
-    typealias UIViewControllerType = MulticastPublisherViewController
+    typealias UIViewControllerType = PublishedPublisherViewController
 
     func makeUIViewController(context: Context) -> UIViewControllerType {
         return UIViewControllerType()
